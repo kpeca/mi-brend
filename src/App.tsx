@@ -239,7 +239,8 @@ function App() {
             <ContactInfo
               icon={<Phone className="w-8 h-8 text-amber-700" />}
               title="WhatsApp / Kontakt"
-              value="[ovde dodaj broj]"
+              value="+381 64 581 1258" // Prikazani broj
+              link="https://wa.me/381645811258" // WhatsApp link
             />
           </div>
         </div>
@@ -298,12 +299,21 @@ const Section = ({ id, title, imageSrc, altText, layout = 'image-right', content
 };
 
 // Komponenta za kontakt informacije
-const ContactInfo = ({ icon, title, value }:{icon:any,title:string,value:string}) => (
+
+// Komponenta za kontakt informacije
+const ContactInfo = ({ icon, title, value, link }:{icon:any,title:string,value:string, link?:string})  => ( // Dodat 'link' prop
   <div className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-md border border-amber-100">
     <div className="mb-4">{icon}</div>
     <h3 className="text-xl font-semibold text-amber-700 mb-2">{title}</h3>
-    <p className="text-gray-600">{value}</p>
+    {link ? ( // Uslovno renderovanje: ako postoji link, prikaži <a> tag
+      <a href={link} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-amber-700 transition-colors duration-300">
+        {value}
+      </a>
+    ) : ( // Inače, prikaži <p> tag
+      <p className="text-gray-600">{value}</p>
+    )}
   </div>
 );
+
 
 export default App;
