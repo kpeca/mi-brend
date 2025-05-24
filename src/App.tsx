@@ -1,90 +1,57 @@
 import  { useState,  } from 'react';
 import { Mail, Instagram, Phone, Facebook, Linkedin, Menu, X } from 'lucide-react'; // Uvozimo Menu i X ikone
+import Header from './components/Header';
+import About from './components/About';
+import MobileMenu from './components/MobileMenu';
+import Hero from './components/Hero';
+import img2 from '../src/assets/img/img2.png'
+import img3 from '../src/assets/img/img3.png'
 
 // Glavna App komponenta koja sadrži sve sekcije
 function App() {
-  const [activeSection, setActiveSection] = useState('o-brendu'); // Stanje za aktivnu sekciju
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Stanje za vidljivost hamburger menija
 
-  // Funkcija za skrolovanje do sekcije
-  const scrollToSection = (id: string) => {
+    const [activeSection, setActiveSection] = useState('o-brendu');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const scrollToSection = (id:string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       setActiveSection(id);
-      setIsMenuOpen(false); // Zatvori meni nakon klika na link
+      setIsMenuOpen(false); // Close menu after clicking a link
     }
   };
 
-  // Komponenta za navigacioni link
-  // 'isMobileMenu' prop je dodata da bi se razlikovalo stilizovanje za desktop i mobilni meni
-  const NavLink = ({ id, text, isMobileMenu = false }: {id:string, text:string, isMobileMenu?:boolean}) => (
-    <a
-      href={`#${id}`}
-      onClick={(e) => {
-        e.preventDefault();
-        scrollToSection(id);
-      }}
-      className={`px-4 py-2 rounded-full transition-colors duration-300 ${
-        isMobileMenu
-          ? 'text-2xl text-white hover:bg-white hover:bg-opacity-20' // Veći tekst, bela boja i suptilan hover efekat za mobilni meni
-          : activeSection === id
-          ? 'bg-amber-700 text-white shadow-lg' // Ostaje amber-700 za aktivni link na desktopu
-          : 'text-gray-700 hover:bg-amber-100' // Ostaje amber-100 za hover na desktopu
-      }`}
-    >
-      {text}
-    </a>
-  );
+  const navItems = [
+    { id: 'o-brendu', text: 'O Brendu' },
+    { id: 'inspiracija-poruka', text: 'Inspiracija i Poruka' },
+    { id: 'karte-znacaj', text: 'Karte i Značaj' },
+    { id: 'uputstvo', text: 'Uputstvo' },
+    // { id: 'cena', text: 'Cena' },
+    { id: 'kontakt', text: 'Kontakt' },
+  ];
+
+
+
+
+
 
   return (
     <div className="min-h-screen font-sans text-gray-800"> {/* Uklonjena glavna bg-gradient jer sekcije imaju specifične boje */}
-      {/* Zaglavlje (Header) */}
-      <header className="fixed top-0 left-0 right-0 shadow-md z-50 p-4" style={{ backgroundColor: '#d9c098' }}> {/* Specifična heksadecimalna boja */}
-        <nav className="container mx-auto flex justify-between items-center">
-          <div className="text-3xl font-extrabold text-white">
-            MI Brend
-          </div>
-
-          {/* Hamburger ikona za mobilne uređaje */}
-          <div className="lg:hidden">
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-white focus:outline-none">
-              {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
-            </button>
-          </div>
-
-          {/* Navigacioni linkovi za desktop */}
-          <div className="hidden lg:flex flex-wrap justify-center gap-3">
-            <NavLink id="o-brendu" text="O Brendu" />
-            <NavLink id="inspiracija-poruka" text="Inspiracija i Poruka" />
-            <NavLink id="karte-znacaj" text="Karte i Značaj" />
-            <NavLink id="uputstvo" text="Uputstvo" />
-            <NavLink id="cena" text="Cena" />
-            <NavLink id="kontakt" text="Kontakt" />
-          </div>
-        </nav>
-      </header>
-
-      {/* Mobilni meni (otvara se klikom na hamburger ikonu) */}
-      {isMenuOpen && (
-        <div className="fixed inset-0 z-40 flex flex-col items-center justify-center space-y-6 lg:hidden transition-opacity duration-300 ease-in-out" style={{ backgroundColor: '#d9c098' }}> {/* Boja pozadine menija je ista kao headera */}
-          <NavLink id="o-brendu" text="O Brendu" isMobileMenu={true} />
-          <NavLink id="inspiracija-poruka" text="Inspiracija i Poruka" isMobileMenu={true} />
-          <NavLink id="karte-znacaj" text="Karte i Značaj" isMobileMenu={true} />
-          <NavLink id="uputstvo" text="Uputstvo" isMobileMenu={true} />
-          <NavLink id="cena" text="Cena" isMobileMenu={true} />
-          <NavLink id="kontakt" text="Kontakt" isMobileMenu={true} />
-        </div>
-      )}
-
+      <Header         navItems={navItems}
+        activeSection={activeSection}
+        scrollToSection={scrollToSection}
+        isMenuOpen={isMenuOpen}
+        setIsMenuOpen={setIsMenuOpen}/>
+  {/* <Hero /> */}
       {/* Sekcija: O Brendu */}
-      <Section
+      {/* <Section
         id="o-brendu"
         title="O Brendu"
         imageSrc="https://placehold.co/600x400/D2B48C/FFFFFF?text=Most+srca+i+uma"
         altText="Ilustracija mosta koji spaja srca i umove"
         layout="image-right"
-        bgColor="#d9c098" // Boja #d9c098
+        bgColor="#e9d1ab" // Boja #d9c098
         content={
           <>
             <p className="mb-4 text-lg leading-relaxed text-gray-800">
@@ -119,13 +86,21 @@ function App() {
             </p>
           </>
         }
-      />
-
+      /> */}
+      
+      {isMenuOpen && (
+        <MobileMenu
+          navItems={navItems}
+          activeSection={activeSection}
+          scrollToSection={scrollToSection}
+        />
+      )}
+     <About />
       {/* Sekcija: Inspiracija i Poruka */}
       <Section
         id="inspiracija-poruka"
         title="Inspiracija i Poruka"
-        imageSrc="https://placehold.co/600x400/F4A460/FFFFFF?text=Inspiracija+i+Poruka"
+        imageSrc={img2}
         altText="Ilustracija inspiracije i poruke"
         layout="image-left"
         bgColor="#f9edd7"
@@ -156,10 +131,10 @@ function App() {
       <Section
         id="karte-znacaj"
         title="Karte i Značaj"
-        imageSrc="https://placehold.co/600x400/BC8F8F/FFFFFF?text=Karte+i+znacaj"
+        imageSrc={img3}
         altText="Ilustracija karata i njihovog značaja"
         layout="image-right"
-        bgColor="#d9c098"
+        bgColor="#e9d1ab"
         content={
           <>
             <p className="mb-4 text-lg leading-relaxed text-gray-800">
@@ -196,7 +171,7 @@ function App() {
         }
       />
 
-      {/* Sekcija: Cena */}
+      {/* Sekcija: Cena
       <Section
         id="cena"
         title="Cena"
@@ -219,17 +194,19 @@ function App() {
             </div>
           </>
         }
-      />
+      /> */}
 
       {/* Sekcija: Kontakt / Ostanimo Povezani */}
-      <section id="kontakt" className="py-16" style={{ backgroundColor: '#f9edd7' }}>
+      <section id="kontakt" className="py-16" style={{ backgroundColor: '#ecd6b2' }}>
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-extrabold text-amber-800 mb-12">Ostanimo Povezani</h2>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-10">
+          <h2 className=" text-4xl font-extrabold text-amber-800 mb-12">Ostanimo Povezani</h2>
+          {/* Promenjeno iz flex u grid za jednake širine kartica */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 justify-items-center">
             <ContactInfo
               icon={<Mail className="w-8 h-8 text-amber-700" />}
               title="Email"
               value="mi.brend.official@gmail.com"
+
             />
             <ContactInfo
               icon={<Instagram className="w-8 h-8 text-amber-700" />}
@@ -275,6 +252,7 @@ const Section = ({ id, title, imageSrc, altText, layout = 'image-right', content
 
   return (
     <section id={id} className={`py-16 px-6`} style={{ backgroundColor: bgColor }}>
+        <h2 className="text-4xl font-extrabold text-amber-800 mb-6 text-center">{title}</h2>
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-12 pt-24 md:pt-16">
         {/* Slika */}
         <div className={`md:w-1/2 ${isImageRight ? 'order-2' : 'order-1'}`}>
@@ -290,7 +268,6 @@ const Section = ({ id, title, imageSrc, altText, layout = 'image-right', content
         </div>
         {/* Tekstualni sadržaj */}
         <div className={`md:w-1/2 ${isImageRight ? 'order-1' : 'order-2'} text-center md:text-left`}>
-          <h2 className="text-4xl font-extrabold text-amber-800 mb-6">{title}</h2>
           {content}
         </div>
       </div>
@@ -302,7 +279,7 @@ const Section = ({ id, title, imageSrc, altText, layout = 'image-right', content
 
 // Komponenta za kontakt informacije
 const ContactInfo = ({ icon, title, value, link }:{icon:any,title:string,value:string, link?:string})  => ( // Dodat 'link' prop
-  <div className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-md border border-amber-100">
+  <div className="w-[400px] flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-md border border-amber-100">
     <div className="mb-4">{icon}</div>
     <h3 className="text-xl font-semibold text-amber-700 mb-2">{title}</h3>
     {link ? ( // Uslovno renderovanje: ako postoji link, prikaži <a> tag
