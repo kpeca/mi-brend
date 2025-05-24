@@ -1,9 +1,8 @@
 import  { useState,  } from 'react';
-import { Mail, Instagram, Phone, Facebook, Linkedin, Menu, X } from 'lucide-react'; // Uvozimo Menu i X ikone
+import { Mail, Instagram, Phone, Facebook, Linkedin } from 'lucide-react'; // Uvozimo Menu i X ikone
 import Header from './components/Header';
 import About from './components/About';
 import MobileMenu from './components/MobileMenu';
-import Hero from './components/Hero';
 import img2 from '../src/assets/img/img2.png'
 import img3 from '../src/assets/img/img3.png'
 
