@@ -8,7 +8,7 @@ const ContactInfo = (
 ) => (
   <div
     style={{ backgroundColor: "#faf2e6" }}
-    className="w-[400px] md:w-full flex flex-col items-center text-center p-6 rounded-xl shadow-md border border-amber-100"
+    className="w-[350px] md:w-full flex flex-col items-center text-center p-6 rounded-xl shadow-md border border-amber-100"
   >
     <div className="mb-4">{icon}</div>
     <h3 className="text-xl font-semibold text-black mb-2">{title}</h3>
