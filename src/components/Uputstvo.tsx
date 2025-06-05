@@ -23,7 +23,7 @@ const Uputstvo = () => (
       {/* Tekstualni sadržaj */}
       <div className={`md:w-1/2 sm:order-1  order-2`}>
         <p className="mb-4 text-lg leading-relaxed">
-          Karte se sastoje od 55 pitanja podeljenih u 5 glavnih oblasti.
+          Karte se sastoje od 55 pitanja podeljenih u 6 glavnih oblasti.
         </p>
         <p className="mb-4 text-lg leading-relaxed">
           Raspored je pažljivo osmišljen i preporučuje se da ga sledite, jer
@@ -31,12 +31,12 @@ const Uputstvo = () => (
           uvodi dublje u razumevanje sebe i drugog.
         </p>
         <ol className="list-disc list-inside text-left text-lg leading-relaxed space-y-2 mb-4">
-          <li>Detinjstvo i formiranje vrednosti</li>
-          <li>Suočavanje s konfliktima</li>
-          <li>Postavljanje granica</li>
-          <li>Izgradnja poverenja</li>
-          <li>Stvaranje bliskosti</li>
-          <li>Razvijanje zdrave seksualnosti</li>
+          <li>Detinjstvo i vrednosti</li>
+          <li>Poverenje i granice</li>
+          <li>Konflikt i razumevanje</li>
+          <li>Odnos i emocije</li>
+          <li>Stilovi ljubavi</li>
+          <li>Seksualnost i intimnost</li>
         </ol>
         <p className="text-lg leading-relaxed">
           Ovakva struktura podržava dublje razumevanje unutrašnjih dinamika i

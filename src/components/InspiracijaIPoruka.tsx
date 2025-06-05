@@ -48,8 +48,8 @@ const InspiracijaIPoruka = () => {
               <span className=" text-black">MI</span>" je za tebe.
             </p>
             <p className="mt-8 text-3xl  text-black">
-              <span className="font-bold text-black">MI</span> – jer najlepša
-              putovanja počinju od “nas”.
+              Ne radiš na vezi zato što nešto ne valja. Već zato što znaš koliko
+              vredi.
             </p>
           </>
         </div>

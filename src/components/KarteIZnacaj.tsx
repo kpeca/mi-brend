@@ -13,16 +13,16 @@ const KarteIZnacaj = () => {
         </h1>
         <div className="w-full text-center">
           {/* Uklonjene md:w-1/2 i order klase, dodata w-full */}
-          <h3 className="text-3xl  text-black mb-4">MI” Karte</h3>
+          <h3 className="text-3xl  text-black mb-4">“MI” Karte</h3>
           <p className="mb-4 text-lg leading-relaxed text-gray-800">
-            Ove karte nisu samo karte, već Investicija koja se prenosi na ceo
+            Ove karte nisu samo karte, već investicija koja se prenosi na ceo
             život.
           </p>
           <p className="mb-6 text-lg leading-relaxed text-gray-800">
             Kada u ruke uzmete ove karte, držite mnogo više od običnog seta
-            pitanja. Pred vama je psihološki sofisticiran alat za transformaciju
-            odnosa i lični razvoj koji otvara vrata prema dubljoj povezanosti sa
-            sobom i voljenima.
+            pitanja. Ove karte grade i jačaju veze - psihološki sofisticiran
+            alat za parove koji žele da prevaziđu nesporazume i ostvare pravu
+            ljubav kroz dublju povezanost
           </p>
           <h3 className="text-3xl  text-black mb-4">Značaj</h3>
           <p className="mb-4 text-lg leading-relaxed text-gray-800">
