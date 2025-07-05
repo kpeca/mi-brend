@@ -2,7 +2,7 @@ import HeroImage2 from "../assets/img/hero.png";
 
 const Hero = () => {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/381645811258", "_blank");
+    window.open("https://wa.me/381611307182", "_blank");
   };
   return (
     <section className="pt-8" style={{ backgroundColor: "#ded0b7" }}>
