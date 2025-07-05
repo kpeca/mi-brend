@@ -25,8 +25,8 @@ const Kontakt = () => {
           <ContactInfo
             icon={<Phone className="w-8 h-8 text-black" />}
             title="WhatsApp / Kontakt"
-            value="+381 64 581 1258" // Prikazani broj
-            link="https://wa.me/381645811258" // WhatsApp link
+            value="+381 61 130 7182" // Prikazani broj
+            link="https://wa.me/381611307182" // WhatsApp link
           />
         </div>
       </div>

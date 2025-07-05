@@ -20,9 +20,13 @@ const Cena = () => {
             Uživajte u ovoj igri i neka vas svaki razgovor još više zbliži!
           </p>
           <p className="mb-4 text-lg leading-relaxed text-gray-800">
-            Kvalitet komunikacije određuje kvalitet veze. Ne čitajte misli, već
-            otvoreno razgovarajte i prevaziđite nesigurnosti. U vašim rukama je
-            alat koji vas može naučiti da slobodno iskažete svoja osećanja.
+            MI karte su dizajnom veoma sofisticirane, a po nameni nadilaze
+            klasične igre i pitanja – one su moćan psihoterapijski alat za
+            promenu. Svaka karta sadrži dubinsko pitanje i svoje produbljeno
+            objašnjenje dostupno putem QR koda, koji vodi ka dubljem
+            razumevanju. Većina postojećih karata su više igre i zabavni alati,
+            dok su MI karte zasnovane na ozbiljnim psihološkim principima i
+            proizašle iz psihoterapijskog konteksta.
           </p>
           <p className="text-lg leading-relaxed text-gray-800">
             Uložite u dublje razgovore, jaču povezanost i ljubav koja traje!

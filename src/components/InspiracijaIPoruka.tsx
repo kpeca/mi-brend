@@ -1,4 +1,4 @@
-import img2 from "../assets/img/img2.png";
+import inspiracijaiporuka from "../assets/img/inspiracijaiporuka2.jpg";
 
 const InspiracijaIPoruka = () => {
   return (
@@ -14,9 +14,10 @@ const InspiracijaIPoruka = () => {
         {/* Slika - uvek prva u JSX-u, pa će na mobilnom biti iznad teksta */}
         <div className={`md:w-1/2 order-1`}>
           <img
-            src={img2}
+            src={inspiracijaiporuka}
             alt="Ilustracija mosta koji spaja srca i umove"
-            className="w-full h-auto rounded-xl  transform transition-transform duration-500 hover:scale-105"
+            // style={{ height: "90%", width: "90%" }}
+            className="w-full h-auto rounded-xl  transform transition-transform duration-500 hover:scale-105 p-4"
             onError={(e: any) => {
               e.target.onerror = null;
               e.target.src = `https://placehold.co/600x400/D2B48C/FFFFFF?text=Slika+nije+dostupna`;
