@@ -9,7 +9,7 @@ const Header = ({
   setIsMenuOpen,
 }: any) => {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/381645811258", "_blank");
+    window.open("https://wa.me/381611307182", "_blank");
   };
   return (
     <header
