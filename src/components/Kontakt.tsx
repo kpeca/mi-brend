@@ -15,12 +15,13 @@ const Kontakt = () => {
           <ContactInfo
             icon={<Mail className="w-8 h-8 text-black" />}
             title="Email"
-            value="mi.brend.official@gmail.com"
+            value="mibrend.official@gmail.com"
           />
           <ContactInfo
             icon={<Instagram className="w-8 h-8 text-black" />}
             title="Instagram"
-            value="@mi.brend.official"
+            value="@mibrend.official"
+            link="https://instagram.com/mibrend.official"
           />
           <ContactInfo
             icon={<Phone className="w-8 h-8 text-black" />}
