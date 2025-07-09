@@ -45,11 +45,11 @@ const InspiracijaIPoruka = () => {
               iskrenim dijalogom i spremnošću da se pogledamo i slušamo.
             </p>
             <p className="text-lg leading-relaxed">
-              Ako si spremna/spreman da zidaš mostove umesto zidova, "
-              <span className=" text-black">MI</span>" je za tebe.
+              Ako si spremna/spreman da zidaš mostove umesto zidova,
+              <span className=" text-black">MI</span> je za tebe.
             </p>
             <p className="mt-8 text-3xl  text-black">
-              Ne radiš na vezi zato što nešto ne valja. Već zato što znaš koliko
+              Ne radiš na vezi zato što nešto ne valja, već zato što znaš koliko
               vredi.
             </p>
           </>

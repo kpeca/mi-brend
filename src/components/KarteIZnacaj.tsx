@@ -13,7 +13,17 @@ const KarteIZnacaj = () => {
         </h1>
         <div className="w-full text-center">
           {/* Uklonjene md:w-1/2 i order klase, dodata w-full */}
-          <h3 className="text-3xl  text-black mb-4">“MI” Karte</h3>
+          <h3 className="text-3xl  text-black mb-4">MI Karte</h3>
+
+          <p className="mb-4 text-lg leading-relaxed text-gray-800">
+            MI karte su dizajnom veoma sofisticirane, a po nameni nadilaze
+            klasične igre i pitanja – one su moćan psihoterapijski alat za
+            promenu. Svaka karta sadrži dubinsko pitanje i svoje produbljeno
+            objašnjenje dostupno putem QR koda, koji vodi ka dubljem
+            razumevanju. Većina postojećih karata su više igre i zabavni alati,
+            dok su MI karte zasnovane na ozbiljnim psihološkim principima i
+            proizašle iz psihoterapijskog konteksta.
+          </p>
           <p className="mb-4 text-lg leading-relaxed text-gray-800">
             Ove karte nisu samo karte, već investicija koja se prenosi na ceo
             život.
@@ -26,7 +36,7 @@ const KarteIZnacaj = () => {
           </p>
           <h3 className="text-3xl  text-black mb-4">Značaj</h3>
           <p className="mb-4 text-lg leading-relaxed text-gray-800">
-            Značaj "Mi" karata za emocionalnu i psihološku inteligenciju.
+            Značaj Mi karata za emocionalnu i psihološku inteligenciju.
           </p>
           <p className="mb-6 text-lg leading-relaxed text-gray-800">
             Veštine koje razvijate kroz autentične dijaloge o najznačajnijim

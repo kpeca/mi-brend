@@ -1,4 +1,4 @@
-import img3 from "../assets/img/img3.png";
+import uputstvo from "../assets/img/uputstvo.png";
 
 const Uputstvo = () => (
   <section
@@ -11,9 +11,9 @@ const Uputstvo = () => (
       {/* Slika - uvek prva u JSX-u, pa će na mobilnom biti iznad teksta */}
       <div className={`md:w-1/2 order-1`}>
         <img
-          src={img3}
+          src={uputstvo}
           alt="Ilustracija mosta koji spaja srca i umove"
-          className="w-full h-auto rounded-xl  transform transition-transform duration-500 hover:scale-105"
+          className="w-full h-auto rounded-xl  transform transition-transform duration-500 hover:scale-105 p-4"
           onError={(e: any) => {
             e.target.onerror = null;
             e.target.src = `https://placehold.co/600x400/D2B48C/FFFFFF?text=Slika+nije+dostupna`;

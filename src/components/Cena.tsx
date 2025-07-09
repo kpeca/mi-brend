@@ -10,26 +10,10 @@ const Cena = () => {
         {/* Slika je uklonjena iz ove sekcije */}
         {/* Tekstualni sadržaj sada zauzima celu širinu */}
         <div className="w-full text-center">
-          <p className="text-4xl text-black mb-4">3.600 dinara</p>
+          <p className="text-3xl text-black mb-4">3.600 dinara</p>
           <p className="mb-4 text-lg leading-relaxed text-gray-800">
             Neprocenjiva vrednost po ceni manjoj od jedne seanse partnerske
-            psihoterapije! Uložite u alat koji unapređuje vaš odnos i čini
-            svakodnevne razgovore dubljim, iskrenijim i značajnijim.
-          </p>
-          <p className="mb-4 text-lg leading-relaxed text-gray-800">
-            Uživajte u ovoj igri i neka vas svaki razgovor još više zbliži!
-          </p>
-          <p className="mb-4 text-lg leading-relaxed text-gray-800">
-            MI karte su dizajnom veoma sofisticirane, a po nameni nadilaze
-            klasične igre i pitanja – one su moćan psihoterapijski alat za
-            promenu. Svaka karta sadrži dubinsko pitanje i svoje produbljeno
-            objašnjenje dostupno putem QR koda, koji vodi ka dubljem
-            razumevanju. Većina postojećih karata su više igre i zabavni alati,
-            dok su MI karte zasnovane na ozbiljnim psihološkim principima i
-            proizašle iz psihoterapijskog konteksta.
-          </p>
-          <p className="text-lg leading-relaxed text-gray-800">
-            Uložite u dublje razgovore, jaču povezanost i ljubav koja traje!
+            psihoterapije!
           </p>
         </div>
       </div>
