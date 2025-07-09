@@ -1,4 +1,4 @@
-import inspiracijaiporuka from "../assets/img/inspiracijaiporuka2.jpg";
+import inspiracijaiporuka from "../assets/img/inspiracijaiporuka3.png";
 
 const InspiracijaIPoruka = () => {
   return (
